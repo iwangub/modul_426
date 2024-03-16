@@ -19,18 +19,32 @@
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card" style="border-radius: 15px;">
                             <div class="card-body p-5">
-                                <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+                                <h2 class="text-uppercase text-center mb-5">Login</h2>
 
                                 <form id="myForm">
 
+                                    
+
                                     <div class="form-outline mb-4">
-                                        <h2>Reigstration Complete!</h2>
+                                        <input type="email" id="form3Example3cg" class="form-control form-control-lg"
+                                            required />
+                                        <label class="form-label" for="form3Example3cg">Your Email</label>
                                     </div>
 
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="form3Example4cg" class="form-control form-control-lg"
+                                            required minlength="6" />
+                                        <label class="form-label" for="form3Example4cg">Password</label>
+                                    </div>
 
+                                    
 
-                                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
-                                            class="fw-bold text-body"><u>Login here</u></a></p>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit"
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Login</button>
+                                    </div>
+
+                                    
 
                                 </form>
                             </div>
@@ -51,7 +65,7 @@
             // Show "Registration Complete" message
             //alert("Registration Complete!");
             // Optionally, you can redirect the user to another page
-            window.location.href = "login.html";
+            window.location.href = "pages/success.html";
         });
     </script>
 
