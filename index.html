@@ -76,29 +76,15 @@
 
 
     <script>
-        function saveFormData() {
-            const formData = new FormData(document.getElementById("myForm"));
-            let dataToWrite = '';
-
-            for (const [key, value] of formData.entries()) {
-                dataToWrite += `${key}: ${value}\n`;
-            }
-
-            download('form_data.txt', dataToWrite);
-        }
-
-        function download(filename, text) {
-            const element = document.createElement('a');
-            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-            element.setAttribute('download', filename);
-
-            element.style.display = 'none';
-            document.body.appendChild(element);
-
-            element.click();
-
-            document.body.removeChild(element);
-        }
+        // Add an event listener to the form submission
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+            // Show "Registration Complete" message
+            //alert("Registration Complete!");
+            // Optionally, you can redirect the user to another page
+            window.location.href = "pages/success.html";
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
